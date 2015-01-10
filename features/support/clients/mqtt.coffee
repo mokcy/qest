@@ -1,4 +1,4 @@
-mqtt = require('mqttjs')
+mqtt = require('mqtt')
 
 class MqttClient
 
