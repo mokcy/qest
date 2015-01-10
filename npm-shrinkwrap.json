@@ -127,8 +127,8 @@
         }
       }
     },
-    "mqttjs": {
-      "version": "0.1.7"
+    "mqtt": {
+      "version": "0.1.8"
     },
     "redis": {
       "version": "0.8.1"
