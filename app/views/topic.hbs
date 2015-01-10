@@ -1,18 +1,18 @@
 <div class="page-header">
-  <h1>Topic: {{topic}}</h1>
+  <h1>节点: {{topic}}</h1>
 </div>
 <div class="row">
   <div class="span12">
     <form class="form-horizontal">
       <div id="payload-field" class="control-group">
-        <label class="control-label" for="payload">Payload</label>
+        <label class="control-label" for="payload"> 负载</label>
         <div class="controls">
           <textarea id="payload" name="payload" class="span8" rows="10" readonly="true"></textarea>
-          <span id="payload-error" class="help-inline hide">Impossible to parse as JSON</span>
+          <span id="payload-error" class="help-inline hide">无法解析成JSON</span>
         </div>
       </div>
       <div class="control-group">
-        <label class="control-label" for="is-json">Validate as JSON</label>
+        <label class="control-label" for="is-json">验证JSON</label>
         <div class="controls">
           <input id="validate" type="checkbox" disabled>
         </div>

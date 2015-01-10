@@ -2,14 +2,14 @@
 <!-- Main hero unit for a primary marketing message or call to action -->
 <div class="jumbo">
   <div class="row">
-    <div class="span1"><br></div>
-    <div class="span6">
-      <h1>MQTT</h1>
-      <h3>The stargate of devices</h3>
+    <div class="span1"></div>
+    <div class="span4">
+      <h1>吊兰</h1>
+        <h3>让我们连接一切的节点。</h3>
     </div>
     <div class="span4">
       <form id="go" method="get">
-        <h2>Open your topic</h2>
+        <h2>打开新的节点</h2>
         <div class="input-append">
           <input type="text" id="topic" name="topic" class="input-large" rows="10" placeholder="Enter the topic name"></input>
           <input type="submit" class="btn btn-success" value="GO!"></input>
@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="span4">
-      <h2>Your latest topics</h2>
+      <h2>最近的节点</h2>
       {{#if topics.length }}
         <ul>
         {{#each topics}}
@@ -33,7 +33,7 @@
         </ul>
       {{else}}
       <p>
-        No topics found, let&lsquo;s open a new one!
+        没有节点，让我们创建新的节点!
       </p>
       {{/if}}
     </div>
@@ -41,57 +41,31 @@
 </div>
 
 <div class="row">
-  <div class="span4">
-    <h2>Building</h2>
+  <div class="span6">
+    <h2>创建</h2>
 {{#markdown}}
-QEST is a stargate between the universe of devices which speak [MQTT](http://mqtt.org), and the universe of apps which
-speak [HTTP](http://en.wikipedia.org/wiki/HTTP) and [REST](http://en.wikipedia.org/wiki/REST).
-In this way you don't have to deal any custom protocol, you just GET and PUT the topic URI, like these:
+``吊兰``是一个在线的物联网测试平台，你可以用他来测试你的物联网设备。网页上创建一个节点，然后你就可以用MQTT,REST,CoAP来测试你的硬件代码。REST示例如下所示:
 
-    $ curl -X PUT -d '{ "hello": 555 }' \
+    $ curl -X PUT -d '{ "dream": 1 }' \
     -H "Content-Type: application/json" \
-    http://mqtt.matteocollina.com/topics/prova
-    $ curl http://mqtt.matteocollina.com/topics/prova
-    { "hello": 555 }
+    http://dream.phodal.com/topics/prova
+    $ curl http://dream.phodal.com/topics/prova
+    { "dream": 1 }
 
-Let's build cool things with MQTT, REST and Arduino!
+让我们用MQTT, REST, CoAP做一些有趣的事!
 {{/markdown}}
   </div>
 
-  <div class="span4">
+  <div class="span6">
 
-    <h2>Dreaming</h2>
+    <h2>More</h2>
 {{#markdown}}
-Here we are dreaming a Web of Things, where you can reach (and interact) with each of your "real" devices using the web,
-as it's the Way everybody interacts with a computer these days.
-However it's somewhat hard to build these kind of apps, so researchers have written custom protocols for communicating 
-with the devices.
 
-The state-of-the-art protocol for __devices__ is [MQTT](http://mqtt.org), which is standard, free of royalties, and widespread: 
-there are libraries for all the major platforms.
+Thanks to the efforts of [Matteo Collina](http://matteocollina.com/) for MQTT.
 
-The state-of-the-art protocol for __apps__ are [REST](http://en.wikipedia.org/wiki/REST) and [HTTP](http://en.wikipedia.org/wiki/HTTP),
-so why can't we bridge them? So QEST was born.
+
 {{/markdown}}
   </div>
 
-  <div class="span4">
-    <!-- Begin MailChimp Signup Form -->
-    <form action="http://matteocollina.us2.list-manage.com/subscribe/post?u=200c4e2156160bb7b9d94e743&amp;id=71af41f393" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-      <h2>Mailing list</h2>
-      <div class="input-append">
-        <input type="email" class="input-large" value="" name="EMAIL" placeholder="Enter your email here" id="mce-EMAIL">
-        <input type="submit" class="btn btn-primary" value="Subscribe" name="subscribe"></input>
-      </div>
-    </form>
-    <!--End mc_embed_signup-->
-
-    <h2>Examples:</h2>
-{{#markdown}}
-* [NetworkButton](https://github.com/mcollina/qest/wiki/Network-Button-Example)
-* [NetworkButtonJSON](https://gist.github.com/mcollina/5337389), same as
-  before, but exchanging JSONs.
-{{/markdown}}
-  </div>
 </div>
 {{ js "home.js" }}
