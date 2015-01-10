@@ -1,5 +1,5 @@
 #! /usr/bin/env node
 
 require('coffee-script')
-app = require("./qest.coffee")
+app = require("./qest-app.js")
 app.start()

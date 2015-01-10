@@ -1,4 +1,4 @@
-env = require("../../qest.coffee")
+env = require("../../qest-app.js")
 zombie = require('zombie')
 
 opts = 

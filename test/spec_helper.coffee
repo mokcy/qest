@@ -1,5 +1,5 @@
 
-env = require("../qest.coffee")
+env = require("../qest-app.js")
 async = require("async")
 
 config =
